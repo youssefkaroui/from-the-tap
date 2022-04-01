@@ -1,14 +1,16 @@
-const api_url = "https://api.openbrewerydb.org/breweries"
+const api_url_state = "https://api.openbrewerydb.org/breweries?by_state="
 const api_url_city = "https://api.openbrewerydb.org/breweries?by_city="
-
-// var, let, const
-
-
-
+const searchInputEl= document.querySelector("#search");
+const searchBtnEl = document.querySelector("#search-brewery-btn");
+const generateRecipeBtnEl = document.querySelector("#get-beer-recipe");
 
 
-function getAndPrintAllBreweries(url,cb) {
-    fetch(url)
+
+
+
+
+function getAndPrintByState(url, state ,cb) {
+    fetch(url+state)
     .then(function (res) {
         return res.json();
     })
@@ -45,8 +47,8 @@ function getAndPrintByCity(url, city, cb) {
     })
 }
 
-getAndPrintAllBreweries(api_url, printBreweries)
-getAndPrintByCity(api_url_city, "los_angeles", printBreweries)
+getAndPrintByState(api_url_state, "ohio", printBreweries);
+getAndPrintByCity(api_url_city, "los_angeles", printBreweries);
 
 
 function printBreweries() {
