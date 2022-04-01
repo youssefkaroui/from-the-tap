@@ -7,16 +7,45 @@
     <title>From The Tap!</title>
 </head>
 <body>
+ <header class="header">
+     <h1 class="website-title" id="website-title">From The Tap!
+        <p class="user-instructions">Search for your favorite Brewery or find a recipe of your favorite Beer!
 
-    <!--Add nav bar with home and search-->
+        </p>
 
-<!--Add hero image and form?-->
+     </h1>
 
-<!--Add div to hold search dropdown and button-->
+ </header>
+ <main class="main">
+   <div class="hero">
+       <div class="search-breweries-box">
+           <h2 class="search-breweries-header">Search for breweries</h2>
+           <form id="search-brewery-form">
+               <div class="search-for-brewery">
+                   <lable for="search"> Grab an ice-cold beer!</lable>
+                   <input class="search-input" id="search" name="search" placeholder="Search by city or state" value>
+                   <button class="search-brewery-btn" id="search-brewery-btn">
+                       <img class="beer-icon" src="" alt="beer-icon">
+                   </button>
+               </div>
 
-<!--Add div for search results on cards-->
+            
+          </form>
 
-<!--Add footer with social info and copyright-->
+       </div>
+       <div class="search-recipe-box">
+           <h2 class="get-recipe-header">Get your beer recipe</h2>
+           <button class="get-beer-recipe" id="get-beer-recipe">Generate a beer recipe!</button>
+
+       </div>
+   </div>
+
+ </main>
+ <footer>
+
+ </footer>
+
+   
 <script src="assets/js/tap.js"></script>
 </body>
 </html>
