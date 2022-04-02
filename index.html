@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
     <title>From The Tap!</title>
 </head>
 <body>
  <header class="header">
-     <h1 class="website-title" id="website-title">From The Tap!
-        <p class="user-instructions">Search for your favorite Brewery or find a recipe of your favorite Beer!
-
+     <h1 class="website-title" id="website-title">From The Tap! </h1>
+     <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#Search">Search</a>
+          </li>
+      </nav>
+        <p class="user-instructions">
+            Search for your favorite brewery or find a new recipe for your next favorite beer!
         </p>
-
-     </h1>
 
  </header>
  <main class="main">
@@ -22,11 +30,14 @@
            <h2 class="search-breweries-header">Search for breweries</h2>
            <form id="search-brewery-form">
                <div class="search-for-brewery">
-                   <lable for="search"> Grab an ice-cold beer!</lable>
+                   <select name="selector" class="select">
+                    <option value="select">City or State</option>
+                    <option value="state">State</option>
+                    <option value="city">City</option>
+                  </select>
+                   
                    <input class="search-input" id="search" name="search" placeholder="Search by city or state" value>
-                   <button class="search-brewery-btn" id="search-brewery-btn">
-                       <img class="beer-icon" src="" alt="beer-icon">
-                   </button>
+                   <button type="submit" class="button" id="search-brewery-btn"> Get drinking </button>
                </div>
 
             
@@ -35,7 +46,7 @@
        </div>
        <div class="search-recipe-box">
            <h2 class="get-recipe-header">Get your beer recipe</h2>
-           <button class="get-beer-recipe" id="get-beer-recipe">Generate a beer recipe!</button>
+           <button class="button" id="get-beer-recipe">Generate a beer recipe!</button>
 
        </div>
    </div>
