@@ -9,9 +9,7 @@
 <body>
  <header class="header">
      <h1 class="website-title" id="website-title">From The Tap!
-        <p class="user-instructions">Search for your favorite Brewery or find a recipe of your favorite Beer!
-
-        </p>
+        <p class="user-instructions">Search for your favorite Brewery or find a recipe of your favorite Beer! </p>
 
      </h1>
 
@@ -23,11 +21,19 @@
            <form id="search-brewery-form">
                <div class="search-for-brewery">
                    <lable for="search"> Grab an ice-cold beer!</lable>
-                   <input class="search-input" id="search" name="search" placeholder="Search by city or state" value>
+                   <input class="search-input" id="search" name="search" placeholder="Search for your brewery" value>
                    <button class="search-brewery-btn" id="search-brewery-btn">
                        <img class="beer-icon" src="" alt="beer-icon">
                    </button>
                </div>
+               <div class="search-options">
+                <select name="search-by" class="select-dropdown" id="search-options">
+                  <option value="" disabled selected>Search by:</option>
+                  <option value="state">State</option>
+                  <option value="city">City</option>
+                 
+                </select>
+              </div>
 
             
           </form>
@@ -37,6 +43,18 @@
            <h2 class="get-recipe-header">Get your beer recipe</h2>
            <button class="get-beer-recipe" id="get-beer-recipe">Generate a beer recipe!</button>
 
+       </div>
+       <div class="breweries-result">
+           <h2 class="b-subtitle"> Your search results</h2>
+           <div class="breweries-list" id="breweries-container">
+
+           </div>
+       </div>
+       <div class="recipes-result">
+           <h2 class="r-subtitle"> Your beer recipe</h2>
+           <div class="recipe-container" id="recipe-container">
+               
+           </div>
        </div>
    </div>
 
