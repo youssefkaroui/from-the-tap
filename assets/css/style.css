@@ -1,6 +1,13 @@
-.header {
+body {
+    margin: 0;
+    padding: 0;
+    display:block;
+}
+
+header {
   text-align: center;
-  border: none;
+  border: 0;
+  border: 0;
   background-color: rgba(15, 20, 90, 0.918);
   color: #ffffff;  
   padding: 0;
@@ -8,7 +15,10 @@
 }
 
 .hero {
-    background-image: url("../assets/images/colorful-beer-taps.jpg");
+    background-image: url("../images/colorful-beer-taps.jpg");
     background-position: scroll;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 40vh;
 
 }
