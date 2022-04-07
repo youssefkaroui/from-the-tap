@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    
     <title>From The Tap!</title>
 </head>
+
 <body>
  <header class="header">
      <h1 class="website-title" id="website-title">From The Tap!
@@ -15,7 +18,9 @@
  
  <main class="main">
 
-     <div class="hero"></div>
+     <div class="hero level">
+         <div class="hero-body level-item has-text-centered"><h1 class="has-text-primary" >From the Tap</h1></div>
+    </div>
 
    <div class="search"> 
        <p class="user-instructions">Search for your favorite Brewery or find a recipe of your favorite Beer! </p>
@@ -25,7 +30,7 @@
                <div class="search-for-brewery">
                    <lable for="search"> Grab an ice-cold beer!</lable>
                    <input class="search-input" id="search" name="search" placeholder="Search for your brewery" value>
-                   <button class="search-brewery-btn" id="search-brewery-btn">
+                   <button class="submit search-brewery-btn" id="search-brewery-btn">
                        <img class="beer-icon" src="" alt="beer-icon">
                    </button>
                </div>
