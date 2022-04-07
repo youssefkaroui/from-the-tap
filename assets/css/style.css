@@ -1,4 +1,5 @@
 body {
+    background-color: rgb(156, 156, 247);
     margin: 0;
     padding: 0;
     display:block;
@@ -10,7 +11,7 @@ header {
   border: 0;
   background-color: rgba(15, 20, 90, 0.918);
   color: #ffffff;  
-  padding: 0;
+  padding: 1px;
   margin: 0;
 }
 
@@ -18,7 +19,13 @@ header {
     background-image: url("../images/colorful-beer-taps.jpg");
     background-position: scroll;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
     height: 40vh;
 
+}
+
+.beer-icon {
+  max-width: 20px;
+  max-height: 20px;
 }

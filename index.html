@@ -11,6 +11,12 @@
  <header class="header">
      <h1 class="website-title" id="website-title">From The Tap!
      </h1>
+     <nav class="navigate">
+        <ul>
+            <li link="/"> Home </li>
+            <li link="#search"> Search </li>
+        </ul>
+    </nav>
  </header>
  
  <main class="main">
@@ -26,7 +32,7 @@
                    <lable for="search"> Grab an ice-cold beer!</lable>
                    <input class="search-input" id="search" name="search" placeholder="Search for your brewery" value>
                    <button class="search-brewery-btn" id="search-brewery-btn">
-                       <img class="beer-icon" src="" alt="beer-icon">
+                       <img class="beer-icon" src="./assets/images/beer-icon.png" alt="beer-icon">
                    </button>
                </div>
                <div class="search-options">
@@ -37,25 +43,26 @@
                  
                 </select>
               </div>
+              <div class="breweries-result">
+                <h2 class="b-subtitle"> Your search results</h2>
+                <div class="breweries-list" id="breweries-container">
+     
+             </div>
+            
 
             
           </form>
 
        </div>
-       <div class="search-recipe-box">
-           <h2 class="get-recipe-header">Get your beer recipe</h2>
-           <button class="get-beer-recipe" id="get-beer-recipe">Generate a beer recipe!</button>
+       <div class="search-fun-fact">
+           <h2 class="get-fun-fact">Generate Fun Fact</h2>
+           <button class="get-fact" id="fun-fact">Click Me!</button>
 
        </div>
-       <div class="breweries-result">
-           <h2 class="b-subtitle"> Your search results</h2>
-           <div class="breweries-list" id="breweries-container">
-
-           </div>
-       </div>
-       <div class="recipes-result">
-           <h2 class="r-subtitle"> Your beer recipe</h2>
-           <div class="recipe-container" id="recipe-container">
+    
+       <div class="fact-results">
+           <h2 class="r-subtitle"> Fun Fact</h2>
+           <div class="result-fun-fact" id="result-fun-fact">
                
            </div>
        </div>
