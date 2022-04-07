@@ -25,41 +25,49 @@
      </header>
  
  <main class="main">
-
+<!--Hero section with image and text-->
      <div class="hero is-large is-full-width level">
          <div class="hero-body level-item has-text-centered"><h1 class="has-text-weight-semibold is-uppercase" >From the Tap</h1></div>
     </div>
 
-   <div class="search"> 
-      <section class="section has-text-centered"> <p class="user-instructions is-size-2">Search for your favorite Brewery and get a fun fact! </p></section>
 
-       <div class="search-breweries-box">
-           <h2 class="search-breweries-header">Search for breweries</h2>
+<!--search and results section-->
+   <div class="search"> 
+      <section class="section has-text-centered"> 
+          <p class="user-instructions is-size-2">Search for your favorite Brewery and get a fun fact! </p>
+        </section>
+
+<!--card for brewery search input-->
+<section class="section columns is-centered is-2 is-mobile">
+       <div class="card column is-two-fifths search-breweries-box">
+           <div class="card-content">
            <form id="search-brewery-form">
                <div class="search-for-brewery">
-                   <lable for="search"> Grab an ice-cold beer!</lable>
-                   <input class="search-input" id="search" name="search" placeholder="Search for your brewery" value>
+                   <label class="label" for="search"> Grab an ice-cold beer!</label>
+                   <div class="search-options">
+                    <select name="search-by" class="select-dropdown" id="search-options">
+                      <option value="" disabled selected>Search by:</option>
+                      <option value="state">State</option>
+                      <option value="city">City</option>
+                     
+                    </select>
+                  </div>
+                   <div class="control">
+                   <input class="field search-input" id="search" name="search" placeholder="Search for your brewery" value>
+                   </div>
                    <button class="submit search-brewery-btn" id="search-brewery-btn">
                        <img class="beer-icon" src="" alt="beer-icon">
                    </button>
-               </div>
-               <div class="search-options">
-                <select name="search-by" class="select-dropdown" id="search-options">
-                  <option value="" disabled selected>Search by:</option>
-                  <option value="state">State</option>
-                  <option value="city">City</option>
-                 
-                </select>
-              </div>
 
-            
+               </div>            
           </form>
-
+            </div>
        </div>
-       <div class="search-recipe-box">
+       <div class="column" ></div>
+       <div class="card column is-two-fifths search-recipe-box">
            <h2 class="get-recipe-header">Get your beer recipe</h2>
            <button class="get-beer-recipe" id="get-beer-recipe">Generate a beer recipe!</button>
-
+</section>
        </div>
        <div class="breweries-result">
            <h2 class="b-subtitle"> Your search results</h2>
@@ -76,8 +84,8 @@
    </div>
 
  </main>
- <footer id="footer">
-
+ <footer class="footer" id="footer">
+     <p>Connect with us!</p>
  </footer>
 
    

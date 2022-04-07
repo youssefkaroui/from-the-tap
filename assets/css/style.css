@@ -48,3 +48,12 @@ main {
     background-color: #000;
     font-family: 'cymbria', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 } 
+
+.section {
+    padding: 20px;
+}
+.card {
+    overflow:hidden;
+    
+    border: solid black;
+}
