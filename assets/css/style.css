@@ -1,7 +1,50 @@
+@font-face {
+    font-family: "salt";
+    src: url(../fonts/Salt-font/Salt.ttf);
+}
+@font-face {
+    font-family: 'salt';
+    font-weight: bold;
+    src: url(../fonts/Salt-font/Salt\ Bold.ttf);
+}
+
+@font-face {
+    font-family: "cymbria";
+    src: url(../fonts/Cymbria-Regular.otf);
+}
+@font-face {
+    font-family: 'cymbria';
+    font-weight: bold;
+    src: url(../fonts/Cymbria-Bold.otf);
+}
+
+@font-face {
+    font-family: 'cymbria-tex';
+    font-style: textured;
+    src: url(../fonts/Cymbria-Textured.otf);
+}
+
 
 .hero {
-    background-image: url("../images/colorful-beer-taps.jpg");
+   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)), url("../images/colorful-beer-taps.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
 }
+
+.hero-body h1 {
+   font-family: 'cymbria-tex', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 8vw;
+    font-weight: bold;
+    color:azure;
+}
+
+nav a {
+    font-family: 'cymbria-tex', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+main {
+    background-color: #000;
+    font-family: 'cymbria', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
