@@ -2,10 +2,10 @@ const api_url_state = "https://api.openbrewerydb.org/breweries?by_state="
 const api_url_city = "https://api.openbrewerydb.org/breweries?by_city="
 const searchInputEl= document.querySelector("#search");
 const searchBtnEl = document.querySelector("#search-brewery-btn");
-const generateRecipeBtnEl = document.querySelector("#get-beer-recipe");
-const api_url_recipe ="https://api.brewersfriend.com/v1/recipes/:recipe_id";
+const generateFunFact = document.querySelector("#fun-fact");
+const api_url_funFact ="https://api.aakhilv.me/fun/facts";
 const searchOptionsEl= document.querySelector("#search-options");
-const recipeEl= document.querySelector("#recipe-container");
+const funFactEl= document.querySelector("#fun-fact-container");
 const listBreweriesEl=  document.querySelector("#breweries-container");
 
 
@@ -14,41 +14,57 @@ const inputHandler = function (event) {
 
     const userInput = searchInputEl.value.trim();
     console.log(userInput);
-    const   optionPicked= document.getElementById("search-options")
+    const   select= document.getElementById("search-options")
+    const optionPicked= select.options[select.selectedIndex].value;
     console.log(optionPicked);
     if (optionPicked === "state") {
         
-        getAndPrintByState(userInput);
+        getAndPrintByState(api_url_state, userInput);
 
 
     } else if (optionPicked === "city") {
 
        
-        getAndPrintByCity(userInput);
+        getAndPrintByCity(api_url_city,userInput);
 
     } else {
         alert("Please enter name of a city or state");
     }
     
 };
-document.getElementById("search-brewery-btn").addEventListener("click", inputHandler());
 
 
 
-
-
-
-
-
-const getAndPrintByState= function (url, state ,cb) {
-    fetch(url+state)
+const getAndPrintByState= function () {
+    fetch(api_url_state, searchInputEl)
     .then(function (res) {
         return res.json();
     })
     .then(function (data) {
         if(data.length > 0) {
             breweries = data;
-            cb()
+            displayBreweries();
+        }
+        else {
+            throw new Error("No brewery found")
+        }
+
+    })
+    .catch(function(error) {
+        console.log(error.message)
+    })
+
+};
+
+const getAndPrintByCity =  function () {
+    fetch(api_url_city+searchInputEl)
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        if(data.length > 0) {
+            breweries = data;
+            displayBreweries(breweries);
         }
         else {
             throw new Error("No brewery found")
@@ -59,50 +75,78 @@ const getAndPrintByState= function (url, state ,cb) {
     })
 };
 
-const getAndPrintByCity =  function (url, city, cb) {
-    fetch(url+city)
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (data) {
-        if(data.length > 0) {
-            breweries = data;
-            cb();
-        }
-        else {
-            throw new Error("No brewery found")
-        }
-    })
-    .catch(function(error) {
-        console.log(error.message)
-    })
-};
+const displayBreweries= function () {
+    
+    for (var i=o; i<breweries.length; i++) {
+        const breweryInformation= createElement("div");
+        const nameEl= breweries[i].name;
+      const adressEl= breweries[i].street+ ","+ breweries[i].city+","+breweries[i].state+","+breweries[i].country+","+breweries[i].postal_code+".";
+      const phoneNumberEl= breweries[i].phone+".";
+      const  breweryTypeEl= breweries[i].brewery_type+".";
+      const websiteEl= createElement ("a");
+      websiteEl.classList= "list-item flex-row justify-space-between align-center";
+      websiteEl.setAttribute("href", breweries[i].website_url);
 
-getAndPrintByState(api_url_state, "ohio", printBreweries);
-getAndPrintByCity(api_url_city, "los_angeles", printBreweries);
+       const brewName= document.createElement("span");
+       brewName.textContent=nameEl;
+        const brewAdress = document.createElement("span");
+        brewAdress.textContent = adressEl;
+        const brewPhone= document.createElement("span");
+        brewPhone.textContent=phoneNumberEl;
+        const brewType=document.createElement("spann");
+        brewType=breweryTypeEl;
+        const brewWebsite= document.createElement("span");
+        brewWebsite.textContent=websiteEl;
+        
+        
+        breweryInformation.appendChild(brewName);
+        breweryInformation.appendChild(brewAdress);
+        breweryInformation.appendChild(brewPhone);
+        breweryInformation.appendChild(brewType);
+        breweryInformation.appendChild(brewWebsite);
+
+        listBreweriesEl.appendChild(breweryInformation);
 
 
-function printBreweries() {
-    console.log(breweries)
+
+    }
 }
 
 
-const getRecipe= function (){
-    fetch(api_url_recipe)
+
+
+
+const generateAndPrintFunFact= function (){
+    fetch(api_url_funFact)
     .then(function(res){
         return res.json();
+        
+
     })
     .then(function(data){
         if(data.length>0){
-            recipe=data;
+            funFact=data;
+            const funF = document.createElement("span");
+            funF.textContent= funFact;
+            funFactEl.appendChild(funF);
+            
+
 
         }
         else{
-            throw new Error("No recipe found")
+            throw new Error("No fun fact found")
         }
     })
     .catch (function(error){
         console.log(error.message)
 
     })
-};
+}
+generateFunFact.addEventListener("click", generateAndPrintFunFact);
+
+
+
+
+
+
+searchBtnEl.addEventListener("click", inputHandler, );

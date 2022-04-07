@@ -1,5 +1,7 @@
+
+
 body {
-    background-color: rgb(156, 156, 247);
+    background-color: rgb(156, 156, 156);
     margin: 0;
     padding: 0;
     display:block;
@@ -7,25 +9,42 @@ body {
 
 header {
   text-align: center;
+  font-size: 35px;
+  border: 0px;
   border: 0;
-  border: 0;
-  background-color: rgba(15, 20, 90, 0.918);
+  background-color: rgb(156, 156, 156);
   color: #ffffff;  
   padding: 1px;
   margin: 0;
 }
 
+
+
 .hero {
-    background-image: url("../images/colorful-beer-taps.jpg");
+    background-image: url("../images/beer-banner.jpeg");
     background-position: scroll;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 40vh;
+    font-size: 65px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px;
+}
 
+.has-text-primary {
+    color: black;
+    border-radius: 10px;
+    position: relative;
+    margin: 0px;
+    padding: 1px;
 }
 
 .beer-icon {
   max-width: 20px;
   max-height: 20px;
 }
+
+
+
+    

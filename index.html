@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    
     <title>From The Tap!</title>
 </head>
+
 <body>
  <header class="header">
-     <h1 class="website-title" id="website-title">From The Tap!
-     </h1>
-     <nav class="navigate">
-        <ul>
-            <li link="/"> Home </li>
-            <li link="#search"> Search </li>
-        </ul>
-    </nav>
+     <h1 class="website-title" id="website-title" link href="/">Home</h1>
  </header>
  
  <main class="main">
 
-     <div class="hero"></div>
+     <div class="hero level">
+         <div class="hero-body level-item has-text-centered">
+             <h1 class="has-text-primary">From the Tap</h1>
+        </div>
+    </div>
 
    <div class="search"> 
        <p class="user-instructions">Search for your favorite Brewery or find a recipe of your favorite Beer! </p>
@@ -35,24 +35,20 @@
                        <img class="beer-icon" src="./assets/images/beer-icon.png" alt="beer-icon">
                    </button>
                </div>
+
                <div class="search-options">
                 <select name="search-by" class="select-dropdown" id="search-options">
                   <option value="" disabled selected>Search by:</option>
                   <option value="state">State</option>
                   <option value="city">City</option>
-                 
                 </select>
               </div>
+
               <div class="breweries-result">
                 <h2 class="b-subtitle"> Your search results</h2>
-                <div class="breweries-list" id="breweries-container">
-     
+                <div class="breweries-list" id="breweries-container"></div>
              </div>
-            
-
-            
           </form>
-
        </div>
        <div class="search-fun-fact">
            <h2 class="get-fun-fact">Generate Fun Fact</h2>
@@ -63,14 +59,13 @@
        <div class="fact-results">
            <h2 class="r-subtitle"> Fun Fact</h2>
            <div class="result-fun-fact" id="result-fun-fact">
-               
            </div>
        </div>
    </div>
 
  </main>
  <footer>
-
+    <h1>Created by Yuusef Brittany Danh</p>
  </footer>
 
    
