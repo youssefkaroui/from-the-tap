@@ -1,6 +1,7 @@
+
 .hero {
-    background: url("../images/colorful-beer-taps.jpg") 50% no-repeat;
+    background-image: url("../images/colorful-beer-taps.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;  
-    background-attachment: fixed;
-    }
+    background-attachment: local;
+}
