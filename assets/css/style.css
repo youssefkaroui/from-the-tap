@@ -75,3 +75,21 @@ main {
     margin: 8px;
     padding: 0px;
 }
+/* About Page and Privacy Policy Page */
+p2 {
+    color: white;
+
+}
+
+h4 {
+    color: white;
+    font-style: bold;
+}
+
+.copywrite-agent {
+    color: white;
+}
+
+.mission {
+    text-align: center;
+}
