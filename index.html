@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>From The Tap!</title>
 </head>
 
@@ -38,12 +40,15 @@
         </section>
 
 <!--card for brewery search input-->
-<section class="section columns is-centered is-2 is-mobile">
-       <div class="card column is-two-fifths search-breweries-box">
-           <div class="card-content">
+<section class="section is-centered is-max-desktop is-mobile">
+       <div class="search-breweries-box columns">
+           <div class="card column">
            <form id="search-brewery-form">
                <div class="search-for-brewery">
-                   <label class="label" for="search"> Grab an ice-cold beer!</label>
+                   <div class="has-text-centered">
+                       <label class="label" for="search"> Grab an ice-cold beer!</label>
+                    </div>
+                <div class="search-stuff">
                    <div class="search-options">
                     <select name="search-by" class="select-dropdown" id="search-options">
                       <option value="" disabled selected>Search by:</option>
@@ -55,32 +60,36 @@
                    <div class="control">
                    <input class="field search-input" id="search" name="search" placeholder="Search for your brewery" value>
                    </div>
-                   <button class="submit search-brewery-btn" id="search-brewery-btn">
+                   <button class="submit search-brewery-btn button is-small" id="search-brewery-btn">
                        <img class="beer-icon" src="./assets/images/beer-icon.png" alt="beer-icon">
                    </button>
-
-               </div>            
+                </div>
+               </div>       
           </form>
-        <div class="breweries-result">
+         </div> 
+        
+          <div class="card column is-mobile">
+              <h2>After you get your beer of choice!</h2>
+              <button class="fun-fact" id="fun-fact">Learn a fun fact!</button>
+              <div class="fun-fact-result">
+                <h2 class="f-subtitle"> Fun fact!</h2>
+                <div class="fun-fact-container" id="fun-fact-container">       
+                </div>
+            </div>
+          </div>
+          </div>
+
+        </section>
+          <div class="breweries-result">
             <h2 class="b-subtitle"> Breweries list:</h2>
-            <div class="breweries-list" id="breweries-container">
+            <div class="breweries-list columns is-mobile" id="breweries-container">
  
             </div>
        </div>
-       <div class="column" ></div>
-       <div class="card column is-two-fifths search-recipe-box">
-           <h2 class="get-recipe-header">After you get your beer of choice!</h2>
-           <button class="fun-fact" id="fun-fact">Learn a fun fact!</button>
+       
 
        </div>
-
-       </div>
-       <div class="fun-fact-result">
-           <h2 class="f-subtitle"> Fun fact!</h2>
-           <div class="fun-fact-container" id="fun-fact-container">
-               
-           </div>
-       </div>
+       
    </div>
 
  </main>
