@@ -52,9 +52,9 @@ main {
 .section {
     padding: 20px;
 }
+
 .card {
-    overflow:hidden;
-    
+    overflow:hidden;   
     border: solid black;
 }
 
