@@ -25,8 +25,8 @@
 }
 
 
-/*.hero {
-   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)), url("../images/colorful-beer-taps.jpg");
+.hero {
+   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)), url("../images/beer-image.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
@@ -69,6 +69,19 @@ main {
     }
 
 .beer-icon {
-    height: 20px;
-    width: 20px;
+    height: 14px;
+}
+
+#search-brewery-btn {
+    position: relative;
+    left: 160px;
+    bottom: 24px;
+}
+
+.logos {
+    height: 75px;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 8px;
+    padding: 0px;
 }
