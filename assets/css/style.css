@@ -57,3 +57,13 @@ main {
     
     border: solid black;
 }
+
+.beer-icon {
+    height: 14px;
+}
+
+#search-brewery-btn {
+    position: relative;
+    left: 160px;
+    bottom: 24px;
+}
