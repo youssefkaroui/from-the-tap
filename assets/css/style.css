@@ -33,14 +33,14 @@
 }*/
 
 .hero-body h1 {
-   font-family: 'cymbria-tex', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-family: 'cymbria-tex', Arial, Helvetica, sans-serif;
     font-size: 8vw;
     font-weight: bold;
     color:azure;
 }
 
 nav a {
-    font-family: 'cymbria-tex', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'cymbria-tex', Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
