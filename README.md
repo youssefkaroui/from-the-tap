@@ -1,4 +1,5 @@
 # From The Tap 
+<img width="1434" alt="Screen Shot 2022-04-08 at 12 44 19 AM" src="https://user-images.githubusercontent.com/99456321/162476681-28de00b1-89ea-4b2d-a282-62a08d7eb354.png">
 
 ## Table of content 
     * Purpose 
@@ -25,7 +26,7 @@ JS
 ## Website
 
 https://youssefkaroui.github.io/from-the-tap/
-<img width="1434" alt="Screen Shot 2022-04-08 at 12 44 19 AM" src="https://user-images.githubusercontent.com/99456321/162476681-28de00b1-89ea-4b2d-a282-62a08d7eb354.png">
+
 
 ## Contribution 
 
