@@ -26,6 +26,7 @@
 
 
 .hero {
+<<<<<<< HEAD
    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)), url("../images/colorful-beer-taps.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,3 +58,18 @@ main {
     
     border: solid black;
 }
+=======
+    background: url("../images/beer-image.jpeg") 50% no-repeat;
+    background-size: cover;
+    height: 50vh;  
+    background-attachment: fixed;
+    color: black;
+    font-size: 75px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+
+.beer-icon {
+    height: 20px;
+    width: 20px;
+}
+>>>>>>> 0181ffb2e29d900d7a6dd680c14c7b800d6f3422
