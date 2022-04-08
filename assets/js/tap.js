@@ -59,14 +59,14 @@ function getAndPrintBreweries(api, input) {
 
 
 function displayBreweries(breweries) {
-
-    for (var i = 0; i < breweries.length; i++) {
+listBreweriesEl.innerHTML="";
+    for (var i = 0; i < 6; i++) {
         const breweryInformation = document.createElement("div");
         breweryInformation.setAttribute("style", "margin-bottom:5px;")
         const nameEl = breweries[i].name;
-        const adressEl = breweries[i].street + ", " + breweries[i].city + ", " + breweries[i].state + ", " + breweries[i].country + ", " + breweries[i].postal_code + ".";
-        const phoneNumberEl = breweries[i].phone + ".";
-        const breweryTypeEl = breweries[i].brewery_type + ".";
+        const adressEl = breweries[i].street + ", " + breweries[i].city + ", " + breweries[i].state + ", " + breweries[i].country + ", " + breweries[i].postal_code;
+        const phoneNumberEl = breweries[i].phone;
+        const breweryTypeEl = breweries[i].brewery_type;
         const websiteEl = breweries[i].website_url
 
         if (nameEl) {
@@ -77,24 +77,33 @@ function displayBreweries(breweries) {
 
         if (adressEl) {
             const brewAdress = document.createElement("p");
-            brewAdress.textContent = adressEl;
+            brewAdress.innerHTML = "<strong>Adress: </strong>"+ adressEl;
             breweryInformation.appendChild(brewAdress);
 
         }
+        
+        if(phoneNumberEl){
         const brewPhone = document.createElement("p");
-        brewPhone.textContent = phoneNumberEl;
+        brewPhone.innerHTML = "<strong>Phone number: </strong>" +phoneNumberEl;
+        breweryInformation.appendChild(brewPhone);
+        }
+       
+        if (breweryTypeEl) {
         const brewType = document.createElement("p");
-        brewType.textContent = breweryTypeEl;
+        brewType.innerHTML = "<strong>Brewery type: </strong>" +breweryTypeEl;
+        breweryInformation.appendChild(brewType);
+        }
+        
+        if (websiteEl) {
         const brewSite = document.createElement("a")
         brewSite.setAttribute("class", "list-item flex-row justify-space-between align-center");
         brewSite.setAttribute("href", breweries[i].website_url);
-        brewSite.textContent = "go to site"
-
-
-
-        breweryInformation.appendChild(brewPhone);
-        breweryInformation.appendChild(brewType);
+        brewSite.textContent = "Go to site"
         breweryInformation.appendChild(brewSite);
+        }
+        
+       
+        
 
         listBreweriesEl.appendChild(breweryInformation);
 
