@@ -30,17 +30,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
-}*/
+}
 
 .hero-body h1 {
-   font-family: 'cymbria-tex', Arial, Helvetica, sans-serif;
+   font-family: 'cymbria-tex', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 8vw;
     font-weight: bold;
     color:azure;
 }
 
 nav a {
-    font-family: 'cymbria-tex', Arial, Helvetica, sans-serif;
+    font-family: 'cymbria-tex', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
 }
 
@@ -52,21 +52,11 @@ main {
 .section {
     padding: 20px;
 }
-
 .card {
-    overflow:hidden;   
+    overflow:hidden;
+    
     border: solid black;
 }
-
-.hero {
-    background: url("../images/beer-image.jpeg") 50% no-repeat;
-    background-size: cover;
-    height: 50vh;  
-    background-attachment: fixed;
-    color: black;
-    font-size: 75px;
-    font-family: 'Times New Roman', Times, serif;
-    }
 
 .beer-icon {
     height: 14px;
