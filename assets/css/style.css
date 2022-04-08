@@ -67,3 +67,11 @@ main {
     left: 160px;
     bottom: 24px;
 }
+
+.logos {
+    height: 75px;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 8px;
+    padding: 0px;
+}
