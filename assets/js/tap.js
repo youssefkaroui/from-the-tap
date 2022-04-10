@@ -67,10 +67,10 @@ function getAndPrintBreweries(api, input) {
 
 function displayBreweries(breweries) {
 listBreweriesEl.innerHTML="";
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 18; i++) {
         const breweryInformation = document.createElement("div");
-        breweryInformation.classList.add('column', 'card')
-        breweryInformation.setAttribute("style", "margin-bottom:15px")
+        breweryInformation.classList.add('column', 'card', 'is-one-quarter')
+        breweryInformation.setAttribute("style", "margin:10px")
         const nameEl = breweries[i].name;
         const adressEl = breweries[i].street + ", " + breweries[i].city + ", " + breweries[i].state + ", " + breweries[i].country + ", " + breweries[i].postal_code;
         const phoneNumberEl = breweries[i].phone;

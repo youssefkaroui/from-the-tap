@@ -48,31 +48,39 @@
                    <div class="has-text-centered">
                        <label class="label" for="search"> Grab an ice-cold beer!</label>
                     </div>
-                <div class="search-stuff">
-                   <div class="search-options">
+                
+                   <div class="level search-options">
+                       <div class="control level-item">
                     <select name="search-by" class="select-dropdown" id="search-options">
                       <option value="" disabled selected>Search by:</option>
                       <option value="state">State</option>
                       <option value="city">City</option>
-                     
                     </select>
+                       </div>
                   </div>
-                   <div class="control">
-                   <input class="field search-input" id="search" name="search" placeholder="Search for your brewery" value>
+
+                   <div class="level">
+                    <div class="field level-item">
+                   <input class="input control search-input" id="search" name="search" placeholder="Search for your brewery" value>
                    </div>
-                   <button class="submit search-brewery-btn button is-small" id="search-brewery-btn">
+                    <div class="field level-item">
+                        <div class="control">
+                      <button class="submit search-brewery-btn button is-rounded is-small is-link-dark is-outlined" id="search-brewery-btn">
                        <img class="beer-icon" src="./assets/images/beer-icon.png" alt="beer-icon">
                    </button>
                 </div>
-               </div>       
+            </div>
+                    </div>
+                </div>       
           </form>
          </div> 
         
-          <div class="card column is-mobile">
-              <h2>After you get your beer of choice!</h2>
-              <button class="fun-fact" id="fun-fact">Learn a fun fact!</button>
+          <div class="card column is-mobile has-text-centered">
+              <h2><strong>After you get your beer of choice!</strong></h2>
+              <button class="fun-fact button is-rounded is-small is-link-dark is-outlined" id="fun-fact">Learn a fun fact!</button>
               <div class="fun-fact-result">
-                <h2 class="f-subtitle"> Fun fact!</h2>
+
+                <!--<h2 class="f-subtitle"> Fun fact!</h2>-->
                 <div class="fun-fact-container" id="fun-fact-container">       
                 </div>
             </div>
@@ -80,12 +88,13 @@
           </div>
 
         </section>
-          <div class="breweries-result">
+
+          <section class="section breweries-result">
             <h2 class="b-subtitle"> Breweries list:</h2>
-            <div class="breweries-list columns is-mobile" id="breweries-container">
+            <div class="breweries-list columns is-multiline is-centered" id="breweries-container">
  
             </div>
-       </div>
+        </section>
        
 
        </div>
@@ -93,19 +102,27 @@
    </div>
 
  </main>
+
  <footer class="footer" id="footer">
-    <p><strong>Connect with us!</strong></p>
-    <div>
-        <a href="https://www.instagram.com/"><img class="logos" src="../from-the-tap/assets/images/Instagram-logo.webp"></a>
-        <a href="https://www.facebook.com/"><img class="logos" src="../from-the-tap/assets/images/Facebook-icon.svg.png"></a>
-        <a href="https://twitter.com/"><img class="logos" src="../from-the-tap/assets/images/Twitter-logo.png"></a>
-    </div>
-    <p>1100 this place, MD 30103</p>
-    <p>1(800) 921-3453 </p>
-     <div> 
-        <a href="../from-the-tap/privacy-policy.html">Read Our Privacy Policy</a><br />
-         <p>&copy; 2022 From The Tap</p>
-      </div>
+     <div class="level is-mobile">
+         <div class="level-left">
+        <ul>
+        <li><p>1100 this place, MD 30103</p></li>
+        <li><p>1(800) 921-3453</p></li>
+        <li><a href="../from-the-tap/privacy-policy.html">Read Our Privacy Policy</a></li>
+        <li><p>&copy; 2022 From The Tap</p></li>
+       </ul>
+    </div>   
+     <div class="level-right">
+         <p class="level-item"><strong>Connect with us!</strong></p>
+         
+         <div class="level-item">
+             <a href="https://www.instagram.com/"><img class="logos icon" src="../from-the-tap/assets/images/Instagram-logo.webp"></a>
+             <a href="https://www.facebook.com/"><img class="logos icon" src="../from-the-tap/assets/images/Facebook-icon.svg.png"></a>
+             <a href="https://twitter.com/"><img class="logos icon" src="../from-the-tap/assets/images/Twitter-logo.png"></a>
+         </div>
+        </div>
+   </div>
  </footer>
 
    
