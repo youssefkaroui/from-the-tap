@@ -31,7 +31,7 @@ const inputHandler = function (event) {
         alert("Please enter name of a city or state");
     }
     let  memory= userInput 
-
+    
     localStorage.setItem("inputEntered", memory)
     let mem=localStorage.getItem("inputEntered")
     console.log(mem);
