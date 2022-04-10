@@ -24,11 +24,14 @@
     src: url(../fonts/Cymbria-Textured.otf);
 }
 
+<<<<<<< HEAD
+=======
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&display=swap');
 
 .block:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+>>>>>>> 06bbe6b3c9c43f33f87de0f54e77066bfd9a0e9b
 
   
 .hero {
@@ -52,12 +55,17 @@ nav a {
 
 main {
     background-color: #000;
-    font-family: 'Lato', sans-serif;
+    font-family: 'cymbria', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 } 
 
 .section {
     padding: 20px;
     font-family: 'Lato', sans-serif;
+}
+.card {
+    overflow:hidden;
+    
+    border: solid black;
 }
 
 .beer-icon {
@@ -68,6 +76,8 @@ main {
     padding: 0px;
 }
 
+<<<<<<< HEAD
+=======
 .card {
     border: rgba(75, 67, 67, 0.945) solid 6px;
     font-family: 'Lato', sans-serif;
@@ -75,6 +85,7 @@ main {
 
  
   
+>>>>>>> 06bbe6b3c9c43f33f87de0f54e77066bfd9a0e9b
 .logos {
     height: 75px;
     position: relative;
@@ -106,9 +117,13 @@ h4 {
 
 .mission {
     text-align: center;
+<<<<<<< HEAD
+
+=======
 }
 
 /*footer */
 .footer {
     background-color: #000;
+>>>>>>> 06bbe6b3c9c43f33f87de0f54e77066bfd9a0e9b
 }
