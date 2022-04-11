@@ -10,7 +10,7 @@ const listBreweriesEl = document.querySelector("#breweries-container");
 const modal = document.getElementById("alertBox");
 const btn = document.getElementById("search-brewery-btn");
 const closeModal = document.getElementById("close-modal");
-const userInput = searchInputEl.value.trim();
+
 
  
 window.onload = function () {
@@ -20,16 +20,16 @@ window.onload = function () {
 const inputHandler = function (event) {
     event.preventDefault();
 
-    
+    const userInput = searchInputEl.value.trim();
     const select = document.getElementById("search-options")
     const optionPicked = select.options[select.selectedIndex].value;
     console.log(optionPicked);
-    if (optionPicked == "state") {
+    if (optionPicked === "state") {
 
         getAndPrintBreweries(api_url_state, userInput);
 
 
-    } else if (optionPicked == "city") {
+    } else if (optionPicked === "city") {
 
 
         getAndPrintBreweries(api_url_city, userInput);
