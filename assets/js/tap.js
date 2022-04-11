@@ -36,9 +36,7 @@ const inputHandler = function (event) {
   
     }
 
-    //} else {
-    //    alert("Please enter name of a city or state");
-    //}
+    
     let  memory = userInput 
     
     localStorage.setItem("inputEntered", memory)
