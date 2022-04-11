@@ -24,12 +24,12 @@ const inputHandler = function (event) {
     const select = document.getElementById("search-options")
     const optionPicked = select.options[select.selectedIndex].value;
     console.log(optionPicked);
-    if (optionPicked == "state") {
+    if (optionPicked === "state") {
 
         getAndPrintBreweries(api_url_state, userInput);
 
 
-    } else if (optionPicked == "city") {
+    } else if (optionPicked === "city") {
 
 
         getAndPrintBreweries(api_url_city, userInput);
@@ -46,7 +46,7 @@ const inputHandler = function (event) {
     console.log(mem);
     
     
-  
+
 
 
 };
@@ -131,7 +131,7 @@ listBreweriesEl.innerHTML="";
         listBreweriesEl.appendChild(breweryInformation);
 
 
-       
+
     }
 }
 
@@ -162,9 +162,5 @@ const generateAndPrintFunFact = function () {
         })
 }
 generateFunFact.addEventListener("click", generateAndPrintFunFact);
-
-
-
-
 
 
