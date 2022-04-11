@@ -18,6 +18,7 @@ window.onload = function () {
 }
 
 const inputHandler = function (event) {
+   
     event.preventDefault();
 
     const userInput = searchInputEl.value.trim();
@@ -39,13 +40,13 @@ const inputHandler = function (event) {
   
     }
 
-    //let  memory = userInput 
+   
     
     localStorage.setItem("inputEntered", document.getElementById('search').value);
     let mem=localStorage.getItem("inputEntered")
     console.log(mem);
     
-    
+   
 
 
 
