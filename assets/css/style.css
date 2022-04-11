@@ -24,11 +24,6 @@
     src: url(../fonts/Cymbria-Textured.otf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&display=swap');
-
-.block:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
 
   
 .hero {
