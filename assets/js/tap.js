@@ -10,14 +10,17 @@ const listBreweriesEl = document.querySelector("#breweries-container");
 const modal = document.getElementById("alertBox");
 const btn = document.getElementById("search-brewery-btn");
 const closeModal = document.getElementById("close-modal");
+const userInput = searchInputEl.value.trim();
 
-
+ 
+window.onload = function () {
+        document.getElementById('search').value = localStorage.getItem('inputEntered');
+}
 
 const inputHandler = function (event) {
     event.preventDefault();
 
-    const userInput = searchInputEl.value.trim();
-    console.log(userInput);
+    
     const select = document.getElementById("search-options")
     const optionPicked = select.options[select.selectedIndex].value;
     console.log(optionPicked);
@@ -36,14 +39,13 @@ const inputHandler = function (event) {
   
     }
 
-    //} else {
-    //    alert("Please enter name of a city or state");
-    //}
-    let  memory = userInput 
+    //let  memory = userInput 
     
-    localStorage.setItem("inputEntered", memory)
+    localStorage.setItem("inputEntered", document.getElementById('search').value);
     let mem=localStorage.getItem("inputEntered")
     console.log(mem);
+    
+    
 
 
 
