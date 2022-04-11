@@ -68,8 +68,6 @@ main {
     padding: 0px;
 }
 
-<<<<<<< HEAD
-=======
 .card {
     border: rgba(75, 67, 67, 0.945) solid 6px;
     font-family: 'Lato', sans-serif;
@@ -77,7 +75,6 @@ main {
 
  
   
->>>>>>> 06bbe6b3c9c43f33f87de0f54e77066bfd9a0e9b
 .logos {
     height: 75px;
     position: relative;
@@ -109,13 +106,10 @@ h4 {
 
 .mission {
     text-align: center;
-<<<<<<< HEAD
-
-=======
 }
 
 /*footer */
 .footer {
     background-color: #000;
->>>>>>> 06bbe6b3c9c43f33f87de0f54e77066bfd9a0e9b
 }
+

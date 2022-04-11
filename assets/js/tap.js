@@ -7,6 +7,10 @@ const api_url_funFact = "https://api.aakhilv.me/fun/facts";
 const searchOptionsEl = document.querySelector("#search-options");
 const funFactEl = document.querySelector("#fun-fact-container");
 const listBreweriesEl = document.querySelector("#breweries-container");
+const modal = document.getElementById("alertBox");
+const btn = document.getElementById("search-brewery-btn");
+const closeModal = document.getElementById("close-modal");
+
 
 
 const inputHandler = function (event) {
@@ -17,20 +21,25 @@ const inputHandler = function (event) {
     const select = document.getElementById("search-options")
     const optionPicked = select.options[select.selectedIndex].value;
     console.log(optionPicked);
-    if (optionPicked === "state") {
+    if (optionPicked == "state") {
 
         getAndPrintBreweries(api_url_state, userInput);
 
 
-    } else if (optionPicked === "city") {
+    } else if (optionPicked == "city") {
 
 
         getAndPrintBreweries(api_url_city, userInput);
-
+    
     } else {
-        alert("Please enter name of a city or state");
+        modal.classList.add('is-active');
+  
     }
-    let  memory= userInput 
+
+    //} else {
+    //    alert("Please enter name of a city or state");
+    //}
+    let  memory = userInput 
     
     localStorage.setItem("inputEntered", memory)
     let mem=localStorage.getItem("inputEntered")
@@ -40,7 +49,11 @@ const inputHandler = function (event) {
 
 };
 
+searchBtnEl.addEventListener("click", inputHandler);
 
+closeModal.addEventListener("click", function() {
+    modal.classList.remove('is-active')
+});
 
 function getAndPrintBreweries(api, input) {
     fetch(api + input)
@@ -153,4 +166,3 @@ generateFunFact.addEventListener("click", generateAndPrintFunFact);
 
 
 
-searchBtnEl.addEventListener("click", inputHandler);
